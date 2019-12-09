@@ -6,7 +6,7 @@
 #    By: hbrulin <hbrulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/08 15:50:08 by hbrulin           #+#    #+#              #
-#    Updated: 2019/12/09 16:36:16 by hbrulin          ###   ########.fr        #
+#    Updated: 2019/12/09 17:11:13 by hbrulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,10 @@ clean:
 fclean: clean
 	@/bin/rm -f $(NAME)
 	@echo "Lib deleted"
+
+cleanlog:
+	@/bin/rm logtime.txt
+	@echo "logtime.txt deleted"
 
 re : 
 	@make fclean
