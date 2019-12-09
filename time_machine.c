@@ -35,8 +35,10 @@ int main(int argc, char **argv)
 	float total;
 	int index;
 	t_list *lst;
+	char *period;
 
-	index = 1;
+	period = argv[1];
+	index = 2;
 	while (index < argc)
 	{
 		ft_lstadd_back(&lst, ft_lstnew(atof(argv[index])));
@@ -49,11 +51,11 @@ int main(int argc, char **argv)
     fichier = fopen("logtime.txt", "a");
 	if (fichier != NULL)
     {
-        fprintf(fichier, "%.2f\n", total);
+        fprintf(fichier, "%s -> %.2f\n", period, total);
 		fclose(fichier);
     }
     else
         printf("Impossible d'ouvrir le fichier test.txt");
-	printf("%.2f\n", total);
+	printf("Ajoute au logtime : %s -> %.2f\n", period, total);
 	return (0);
 }
