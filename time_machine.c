@@ -54,6 +54,6 @@ int main(int argc, char **argv)
     }
     else
         printf("Impossible d'ouvrir le fichier test.txt");
-
+	printf("%.2f\n", total);
 	return (0);
 }
